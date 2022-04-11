@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">NO:</th>
+          <th scope="col">USER NAME</th>
+          <th scope="col">USER EMAIL</th>
+          <th scope="col">USER NUMBER</th>
+          <th scope="col">USER DATE OF BIRTH</th>
+          <th scope="col">USER COUNTRY</th>
+          <th scope="col">USER PASSWORD</th>
+          <th scope="col">STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of tableList; index as i">
+          <td class="table-active">{{ i + 1 }}</td>
+          <td class="table-warning">{{ list.name }}</td>
+          <td class="table-primary">{{ list.email }}</td>
+          <td class="table-success">{{ list.number }}</td>
+          <td class="table-primary">{{ list.date }}</td>
+          <td class="table-info">{{ list.country }}</td>
+          <td class="table-secondary">{{ list.password }}</td>
+          <td class="table-active">
+            <button
+              class="btn btn-warning"
+              type="button"
+              (click)="updateOne(list, i)"
+            >
+              Update
+            </button>
+            <button
+              class="btn btn-danger gap"
+              type="button"
+              (click)="deleteOne(i)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

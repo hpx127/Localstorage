@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="d-flex justify-content-center">
+      <div class="boox">
+        <div class="d-flex justify-content-center h1-col">
+          <h3>STUDENT FORM-1 REGISTER</h3>
+        </div>
+        <div class="d-flex justify-content-center inp-pad">
+          <form #f="ngForm" (ngSubmit)="insertData1(f)">
+            <label>User Name :: </label>
+            <input
+              type="text"
+              name="name"
+              [(ngModel)]="data1.name"
+              placeholder="your name"
+            />
+            <br />
+            <br />
+
+            <label>User Email :: </label>
+            <input
+              type="email"
+              name="email"
+              [(ngModel)]="data1.email"
+              placeholder="your email"
+            />
+            <br />
+            <br />
+
+            <label>User Number :: </label>
+            <input
+              type="number"
+              name="number"
+              [(ngModel)]="data1.number"
+              placeholder="your number"
+            />
+            <br />
+            <br />
+
+            <button class="btn btn-danger gap" type="submit">{{ btn }}</button>
+          </form>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-primary" routerLink="/form/table">
+            Table View
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
